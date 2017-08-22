@@ -1,9 +1,17 @@
 class World(object):
     def __init__(self, width=64, height=64):
         self._name = 'Default'
-        self.width = width
-        self.height = height
+        self._width = width
+        self._height = height
         self._mapData = None
+
+    @property
+    def width(self):
+        return self._width
+
+    @property
+    def height(self):
+        return self._height
 
     @property
     def name(self):
@@ -11,7 +19,7 @@ class World(object):
 
     def generate(self):
         """ Generate empty map"""
-        self._mapData = [[{}] * self.height for x in range(self.width)]
+        self._mapData = [[{}] * self._height for x in range(self._width)]
 
     def size(self):
-        return len(self._mapData), len(self._mapData[0])
+        return self.width, self.height
