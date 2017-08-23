@@ -1,5 +1,6 @@
 import unittest
-from thepass.plot import Plot
+
+from thepass.model.plot import Plot
 
 
 class TestPlot(unittest.TestCase):

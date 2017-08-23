@@ -1,5 +1,6 @@
 import unittest
-from thepass.world import World
+
+from thepass.model.world import World
 
 
 class TestWorld(unittest.TestCase):
