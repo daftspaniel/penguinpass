@@ -18,6 +18,10 @@ class TestWorld(unittest.TestCase):
         self.assertEqual(width, 64)
         self.assertEqual(height, 128)
 
+    def test_save(self):
+        self.world = World()
+        self.save()
+
 
 if __name__ == '__main__':
     unittest.main()

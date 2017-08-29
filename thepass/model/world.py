@@ -26,3 +26,11 @@ class World(object):
 
     def size(self):
         return self.width, self.height
+
+    def __str__(self):
+        out = ""
+        for col in self._mapData:
+            for item in col:
+                out += str(item.type)
+            out += '\n'
+        return out
