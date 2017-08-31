@@ -27,6 +27,9 @@ class World(object):
     def size(self):
         return self.width, self.height
 
+    def save(self):
+        print("Not implemented.")
+
     def __str__(self):
         out = ""
         for col in self._mapData:

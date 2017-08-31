@@ -1,0 +1,6 @@
+language: python
+python:
+  - "3.6.1"
+cache: pip
+script:
+  - python -m unittest discover -v test

@@ -3,7 +3,7 @@ import tkinter as tk
 
 from thepass.model.world import World
 
-world = World()
+world = World(8, 8)
 
 
 class Viewer(tk.Frame):
@@ -22,6 +22,8 @@ class Viewer(tk.Frame):
         self.text.pack(side="left", fill="both", expand=True)
 
     def log(self, text):
+        if text.find('\n') > 0:
+            text = '\n' + text
         self.text.insert("end", time.ctime() + "\t" + text + "\n")
         self.text.see("end")
 

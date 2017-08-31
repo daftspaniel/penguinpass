@@ -20,7 +20,12 @@ class TestWorld(unittest.TestCase):
 
     def test_save(self):
         self.world = World()
-        self.save()
+        self.world.save()
+
+    def test_str(self):
+        self.world = World(2, 3)
+        self.world.generate()
+        self.assertEqual("111\n111\n", str(self.world))
 
 
 if __name__ == '__main__':
